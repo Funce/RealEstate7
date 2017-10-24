@@ -1,0 +1,56 @@
+nav {position:absolute; left:60px; bottom:0; z-index:100; background:url(../img/nav-bg.png) 0 0 repeat;}
+ul.menu {margin:0 29px 0 30px;}
+ul.menu li {float:left; line-height:35px; margin:0px 0 0px 0px; background:transparent;}
+ul.menu li a {font-size:28px; line-height:35px; color:#fff; display:block; padding: 17px 33px 18px 33px; }
+ul.menu li:hover , ul.menu li.current {background:#2098f5;}
+/*********************************header*************************************/
+header {width:100%; z-index:101; }
+header>div {width:100%; margin:0 auto; position:relative; }
+
+h1 {position:absolute; left:132px; top:0px; display:inline-block; z-index:100;}
+a {text-decoration:none; cursor:pointer;}
+a:hover {text-decoration:none;}
+a.button {background:#2098f5; font-size:20px; line-height:24px; color:#fff; display:inline-block; padding:5px 23px 5px 23px; }
+a.button:hover {background:#131313; }
+a.link {text-decoration:none; cursor:pointer; color:#2098f5; }
+a.link:hover {text-decoration:underline;}
+.color-1 { color:#fff;}
+a.color-1:hover {text-decoration:underline;}
+.font-3 {font-size:17px; line-height:33px; color:#292929;}
+h2 { font-size:36px; line-height:45px; color:#fff; font-weight:normal; letter-spacing:-1px;}
+h3 { font-size:24px; line-height:30px; color:#fff; font-weight:normal; }
+ul {margin:0; padding:0;list-style-image:none;}
+ul.list-1 li {padding:0px 0 0px 11px; line-height:25px; background:url(../img/marker.gif) 0 10px no-repeat;}
+ul.list-1 li a { font-size:14px; color:#fff; line-height:25px;}
+ul.list-1 li a:hover {color:#2098f5;}
+#content {width:960px; margin:0 auto; padding-bottom:78px;}
+
+.line-1 {background:url(../img/line.png) 0 bottom repeat-x; padding-bottom:29px; margin-bottom:24px;}
+.img-border {border:#fff 4px solid;}
+
+.block-1>div {float:left; width:180px; margin-right:40px;}
+.block-1>div h3 {margin:14px 0 4px 0;}
+.block-1>div a.button {margin:18px 0 0px 0;}
+
+.form-1 {}
+.form-1 label {font:14px/25px Arial, Helvetica, sans-serif; color:#939393; padding-bottom:5px; }
+.form-1 input {font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#535353; background:#131313; padding:8px 10px 9px 15px;outline: medium none; width: 245px; height:17px; float:left; margin-bottom:12px;}
+.form-1 .select-1 {width:270px; margin-bottom:12px;}
+.form-1 .select-2 {width:128px; margin-right:14px; float:left;}
+.form-1>a.button {margin-top:30px; padding-left:36px; padding-right:37px;}
+
+.lists {overflow:hidden;}
+.lists ul {float:left; margin-right:15px; width:120px;}
+.lists-2 {margin:23px 0 23px 0; overflow:hidden;}
+.lists-2 ul {float:left; margin-right:40px; width:180px;}
+
+.block-2>a {float:left; margin-right:20px; display:inline-block;}
+body {
+	background-color: dimgrey;
+}
+h3 { 
+	font-size:24px; 
+	line-height:30px; 
+	color:#000; 
+	font-weight:normal; 
+}
