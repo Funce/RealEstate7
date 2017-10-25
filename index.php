@@ -37,38 +37,40 @@
     <!-- /.navbar-collapse --> 
   </div>
   <!-- /.container-fluid --> 
-</nav>
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 hidden-xs">
-        <div id="carousel-299058" class="carousel slide">
-          <ol class="carousel-indicators">
-            <li data-target="#carousel-299058" data-slide-to="0" class="active"> </li>
-            <li data-target="#carousel-299058" data-slide-to="1" class=""> </li>
-            <li data-target="#carousel-299058" data-slide-to="2" class=""> </li>
-          </ol>
-          <div class="carousel-inner">
-            <div class="item"> <img class="img-responsive" src="img/slider-1.jpg" alt="thumb">
-              <div class="carousel-caption"> Buy your dream home today! </div>
-            </div>
-            <div class="item active"> <img class="img-responsive" src="img/slider-2.jpg" alt="thumb">
-              <div class="carousel-caption"> Dreams may not be free but they are worth it! </div>
-            </div>
-            <div class="item"> <img class="img-responsive" src="img/slider-3.jpg" alt="thumb">
-              <div class="carousel-caption"> Let us help you find your perfect home. </div>
-            </div>
-          </div>
-          <a class="left carousel-control" href="#carousel-299058" data-slide="prev"><span class="icon-prev"></span></a> <a class="right carousel-control" href="#carousel-299058" data-slide="next"><span class="icon-next"></span></a></div>
-          <nav>
-            <ul class="menu">
-                <li class="current"><a href="index.html">Main</a></li>
-                <li><a href="buying.html">Buying</a></li>
-                <li><a href="selling.html">Selling</a></li>
-                <li><a href="renting.html">Renting</a></li>
-                <li><a href="finance.html">Finance</a></li>
-                <li><a href="contacts.html">Contacts</a></li>
-            </ul>
-        </nav>
+	</nav>
+	<div class="container">
+	<div class="row">
+	  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 hidden-xs">
+		<div id="carousel-299058" class="carousel slide">
+		  <ol class="carousel-indicators">
+			<li data-target="#carousel-299058" data-slide-to="0" class="active"> </li>
+			<li data-target="#carousel-299058" data-slide-to="1" class=""> </li>
+			<li data-target="#carousel-299058" data-slide-to="2" class=""> </li>
+		  </ol>
+		  <div class="carousel-inner">
+			<div class="item"> <img class="img-responsive" src="img/slider-1.jpg" alt="thumb">
+			  <div class="carousel-caption"> Buy your dream home today! </div>
+			</div>
+			<div class="item active"> <img class="img-responsive" src="img/slider-2.jpg" alt="thumb">
+			  <div class="carousel-caption"> Dreams may not be free but they are worth it! </div>
+			</div>
+			<div class="item"> <img class="img-responsive" src="img/slider-3.jpg" alt="thumb">
+			  <div class="carousel-caption"> Let us help you find your perfect home. </div>
+			</div>
+		  </div>
+		  <a class="left carousel-control" href="#carousel-299058" data-slide="prev"><span class="icon-prev"></span></a> <a class="right carousel-control" href="#carousel-299058" data-slide="next"><span class="icon-next"></span></a></div>
+		<nav>
+			<div id="main_navigation">
+				<ul class="menu">
+					<li class="current"><a href="index.html">Main</a></li>
+					<li><a href="buying.html">Buying</a></li>
+					<li><a href="selling.html">Selling</a></li>
+					<li><a href="renting.html">Renting</a></li>
+					<li><a href="finance.html">Finance</a></li>
+					<li><a href="contacts.html">Contacts</a></li>
+				</ul>
+			</div>
+     	</nav>
       </div>    
     </div>
     <hr>
