@@ -41,16 +41,21 @@
 	<div class="container">
 	<div class="row">
 	  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 hidden-xs">
-		<div id="carousel-299058" class="carousel slide">		  
+		<div id="carousel-299058" class="carousel slide">
+		  <ol class="carousel-indicators">
+			<li data-target="#carousel-299058" data-slide-to="0" class="active"> </li>
+			<li data-target="#carousel-299058" data-slide-to="1" class=""> </li>
+			<li data-target="#carousel-299058" data-slide-to="2" class=""> </li>
+		  </ol>
 		  <div class="carousel-inner">
 			<div class="item"> <img class="img-responsive" src="img/slider-1.jpg" alt="thumb">
-			  <div class="carousel-299058-caption"> Buy your dream home today! </div>
+			  <div class="carousel-caption"> Buy your dream home today! </div>
 			</div>
 			<div class="item active"> <img class="img-responsive" src="img/slider-2.jpg" alt="thumb">
-			  <div class="carousel-299058-caption"> Dreams may not be free but they are worth it! </div>
+			  <div class="carousel-caption"> Dreams may not be free but they are worth it! </div>
 			</div>
 			<div class="item"> <img class="img-responsive" src="img/slider-3.jpg" alt="thumb">
-			  <div class="carousel-299058-caption"> Let us help you find your perfect home. </div>
+			  <div class="carousel-caption"> Let us help you find your perfect home. </div>
 			</div>
 		  </div>
 		  <a class="left carousel-control" href="#carousel-299058" data-slide="prev"><span class="icon-prev"></span></a> <a class="right carousel-control" href="#carousel-299058" data-slide="next"><span class="icon-next"></span></a></div>
@@ -76,14 +81,27 @@
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
         <div class="media-object-default">
           <div class="media">
+            <div class="media-left"> <a href="#"> <img class="media-object img-circle" src="img/100X100.gif" alt="placeholder image"> </a> </div>
+            <div class="media-body">
+              <h4 class="media-heading">Heading 1</h4>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, sequi, repudiandae tenetur et veniam labore debitis repellendus totam non incidunt hic esse!</div>
           </div>
         </div>
       </div>
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
         <div class="media">
+          <div class="media-left"> <a href="#"> <img class="media-object img-circle" src="img/100X100.gif" alt="placeholder image"></a></div>
+          <div class="media-body">
+            <h4 class="media-heading">Heading 2</h4>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, odit, consequuntur, quae, at tempore nostrum perferendis corporis nam maxime tenetur iure facilis.</div>
+        </div>
       </div>
       <div class="col-lg-4 col-md-4 col-sm-6 hidden-sm hidden-xs">
         <div class="media">
+          <div class="media-left"> <a href="#"> <img class="media-object img-circle" src="img/100X100.gif" alt="placeholder image"></a></div>
+          <div class="media-body">
+            <h4 class="media-heading">Heading 3</h4>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, id, aut, officiis laboriosam a vero illo dolor asperiores provident quibusdam praesentium ipsum!</div>
         </div>
       </div>
     </div>
@@ -157,7 +175,7 @@
           </div>
         </div>
       </div>
-    </div> 
+    </div>
     <div class="col-lg-3 col-md-6 col-md-offset-3 col-lg-offset-0">
       <div class="well">
         <h3 class="text-center">Find Your Home</h3>
@@ -277,35 +295,26 @@
 </div>
         </div>
       </div>
-      <div class="container services">
       <div class="col-lg-6">
         <h3>Our Services</h3>
-        <hr>    
+        <hr>
         <ul id="myTab1" class="nav nav-tabs">
-          <li class="active"> <a href="#home1" data-toggle="tab"> <strong>Buying </strong></a> </li>
-          <li><a href="#pane2" data-toggle="tab"><strong>Renting</strong></a></li>
-          <li> <a href="#pane3" data-toggle="tab"><strong>Selling</strong></a> </li>
+          <li class="active"> <a href="#home1" data-toggle="tab"> Buying </a> </li>
+          <li><a href="#pane2" data-toggle="tab">Renting</a></li>
+          <li> <a href="#pane3" data-toggle="tab">Leasing</a> </li>
         </ul>
         <div id="myTabContent1" class="tab-content">
           <div class="tab-pane fade in active" id="home1">
-            <p class="text-center"><img src="img/dreamhome.jpg" alt=""></p>
-            <p>How you approach buying a home depends on your experience.
-Is it your 1st home or is it your 20th?
-Are you looking for an investment or a renovator?
-Perhaps a “trade and flick” or a family home where the kids can grow up?</p>
-         <p class="text-center"><a href="#" class="btn btn-info" role="button">Read More</a></p>
+            <p class="text-center"><img src="img/3b536b.gif" alt=""></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus maxime aut ea impedit voluptates aperiam dolor laborum officiis autem aspernatur! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, alias, repudiandae sunt illo consequatur aperiam doloribus nesciunt ut deserunt ipsa est tempora nihil. Totam eveniet aperiam debitis fugit ipsa doloremque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio sequi dolorem suscipit assumenda molestiae voluptatem qui consequuntur magni? Deleniti, corporis.</p>
           </div>
           <div class="tab-pane fade" id="pane2">
-            <p class="text-center"><img src="img/rental.jpg" alt=""></p>
-            <p>The question on whether to Rent or Buy a property is one that people often ponder. The answer is very dependent on your financial situation, lifestyle and attitude. Renting is a particularly good option if you enjoy the freedom to move around or if your personal circumstances are likely to change. It easily allows you to give notice and move on with little delay and the financial and legal considerations of having to put your home on the market and sell it.</p>
-            <p class="text-center"><a href="#" class="btn btn-info" role="button">Read More</a></p>
+            <p class="text-center"><img src="img/9b59b6.gif" alt=""></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus maxime aut ea impedit voluptates aperiam dolor laborum officiis autem aspernatur! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, alias, repudiandae sunt illo consequatur aperiam doloribus nesciunt ut deserunt ipsa est tempora nihil. Totam eveniet aperiam debitis fugit ipsa doloremque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio sequi dolorem suscipit assumenda molestiae voluptatem qui consequuntur magni? Deleniti, corporis.</p>
           </div>
           <div class="tab-pane fade" id="pane3">
-            <p class="text-center"><img src="img/selling.jpg" alt=""></p>
-            <p>Statistics suggest that 50% of people consider selling privately.
-30 % actually attempt it, yet in NZ, only 10% of homes are privately sold.
-That’s a big gap.</p>
-         <p class="text-center"><a href="#" class="btn btn-info" role="button">Read More</a></p>            
+            <p class="text-center"><img src="img/16a085.gif" alt=""></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus maxime aut ea impedit voluptates aperiam dolor laborum officiis autem aspernatur! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, alias, repudiandae sunt illo consequatur aperiam doloribus nesciunt ut deserunt ipsa est tempora nihil. Totam eveniet aperiam debitis fugit ipsa doloremque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio sequi dolorem suscipit assumenda molestiae voluptatem qui consequuntur magni? Deleniti, corporis.</p>
           </div>
         </div>
       </div>

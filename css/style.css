@@ -73,3 +73,14 @@ h3 {
 	color:#000; 
 	font-weight:normal; 
 }
+#myTabContent1 {
+	background-color: white;
+	font-weight: bold;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 5px;
+}
+img {
+    width: 100%;
+    height: auto;
+}
