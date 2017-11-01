@@ -8,7 +8,13 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KJGS4HC');</script>
+<!-- End Google Tag Manager -->
 <title>Real Estate 7</title>
 
 <!-- Bootstrap -->
@@ -16,6 +22,10 @@
 <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap-theme.css">
 <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap-theme.min.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap-social.css">
+<!-- Font CSS -->
+<link rel="stylesheet" type="text/css" media="screen" href="css/font-awesome.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/font-awesome.min.css">
 <!-- Custom CSS -->
 <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
 
@@ -29,6 +39,10 @@
     <![endif]-->
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KJGS4HC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <nav class="navbar navbar-inverse">
   <div class="container-fluid"> 
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -364,6 +378,20 @@ Addington<br>
         <strong>Contact</strong><br>
         <a href="mailto:#">sales@berclay.co.nz</a>
       </address>
+      <a class="btn btn-social-icon btn-facebook">
+    <span class="fa fa-facebook-square"></span>
+  </a>
+   <a class="btn btn-social-icon btn-google plus">
+    <span class="fa fa-google-plus-square"></span>
+  </a>
+   </a>
+   <a class="btn btn-social-icon btn-twitter">
+    <span class="fa fa-twitter-square"></span>
+  </a>
+   </a>
+   <a class="btn btn-social-icon btn-linkedin">
+    <span class="fa fa-linkedin-square"></span>
+  </a>
 </div>
   </div>
 </div>
