@@ -37,6 +37,16 @@
       <a class="navbar-brand" href="http://realestate7.serverup.xyz/?i=1"><img class="img-responsive" src="img/logo.jpg" alt="thumb"> </a> </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="myInverseNavbar2">
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> <strong>Sign Up</strong></a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> <strong>Login</strong></a></li>
+      <li class="visible-xs-inline"><a href="index.php">Home</a></li>
+      <li class="visible-xs-inline"><a href="buy.php">Buying</a></li>
+      <li class="visible-xs-inline"><a href="sell.php">Selling</a></li>
+      <li class="visible-xs-inline"><a href="rent.php">Renting</a></li>
+      <li class="visible-xs-inline"><a href="finance.php">Finance</a></li>
+      <li class="visible-xs-inline"><a href="contact.php">Contact Us</a></li>
+    </ul>
     </div>
     <!-- /.navbar-collapse --> 
   </div>
@@ -61,12 +71,12 @@
 		<nav>
 			<div id="main_navigation">
 				<ul class="menu">
-					<li class="current"><a href="index.html">Main</a></li>
-					<li><a href="buying.html">Buying</a></li>
-					<li><a href="selling.html">Selling</a></li>
-					<li><a href="renting.html">Renting</a></li>
-					<li><a href="finance.html">Finance</a></li>
-					<li><a href="contacts.html">Contacts</a></li>
+					<li class="current"><a href="index.php">Main</a></li>
+					<li><a href="buy.php">Buying</a></li>
+					<li><a href="sell.php">Selling</a></li>
+					<li><a href="rent.php">Renting</a></li>
+					<li><a href="finance.php">Finance</a></li>
+					<li><a href="contact.php">Contact Us</a></li>
 				</ul>
 			</div>
      	</nav>
