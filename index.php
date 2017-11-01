@@ -307,19 +307,16 @@
 Is it your 1st home or is it your 20th?
 Are you looking for an investment or a renovator?
 Perhaps a “trade and flick” or a family home where the kids can grow up?</p>
-         <p class="text-center"><a href="#" class="btn btn-info" role="button">Read More</a></p>
           </div>
           <div class="tab-pane fade" id="pane2">
             <p class="text-center"><img src="img/rental.jpg" alt=""></p>
             <p>The question on whether to Rent or Buy a property is one that people often ponder. The answer is very dependent on your financial situation, lifestyle and attitude. Renting is a particularly good option if you enjoy the freedom to move around or if your personal circumstances are likely to change. It easily allows you to give notice and move on with little delay and the financial and legal considerations of having to put your home on the market and sell it.</p>
-            <p class="text-center"><a href="#" class="btn btn-info" role="button">Read More</a></p>
           </div>
           <div class="tab-pane fade" id="pane3">
             <p class="text-center"><img src="img/selling.jpg" alt=""></p>
             <p>Statistics suggest that 50% of people consider selling privately.
 30 % actually attempt it, yet in NZ, only 10% of homes are privately sold.
-That’s a big gap.</p>
-         <p class="text-center"><a href="#" class="btn btn-info" role="button">Read More</a></p>            
+That’s a big gap.</p>            
           </div>
         </div>
       </div>
@@ -333,8 +330,9 @@ That’s a big gap.</p>
       </span>
   <h3>About Us</h3>
   <hr>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, consequatur neque exercitationem distinctio esse! Cupiditate doloribus a consequatur iusto illum eos facere vel iste iure maxime. Velit, rem, sunt obcaecati eveniet id nemo molestiae. In.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, consequatur neque exercitationem distinctio esse! Cupiditate doloribus a consequatur iusto illum eos facere vel iste iure maxime. Velit, rem, sunt obcaecati eveniet id nemo molestiae. In.</p>
+  <p>Our approach is founded on providing personal service through individual Property Managers with an underlying philosophy of treating your property as if it were our own.</p>
+  <p>Real Estate 7 comprises of an experienced, motivated and specialised team of dedicated people.</p>
+  <p>Our continual striving for excellent customer service is the cornerstone of our success. Our goal is to exceed customer expectations wherever possible and make business with us enjoyable.</p>
 </div>
 <div class="col-xs-6 col-sm-6 col-lg-4 col-md-4 hidden-sm hidden-xs"> <span class="text-right"> </span>
   <h3>Latest News</h3>
@@ -342,14 +340,14 @@ That’s a big gap.</p>
   <div class="media-object-default">
   <div class="media">
   <div class="media-body">
-        <h4 class="media-heading">Heading 1</h4>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, quod temporibus veniam deserunt deleniti accusamus voluptatibus at illo sunt quisquam. </div>
+        <h4 class="media-heading">Investors</h4>
+	  <p>• Restrictions for investor lending extended from nationwide from Auckland only. <p>• Banks will be forced to require a 40 per cent deposit - up from 30 per cent - for at least 95 per cent of the loans they make in this area.</p></div>
       <div class="media-right"> <a href="#"> <img class="media-object" src="img/75X.gif" alt="placeholder image"></a></div>
 </div>
 <div class="media">
   <div class="media-body">
-    <h4 class="media-heading">Heading 2</h4>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, iure nemo earum quae aliquid animi eligendi rerum rem porro facilis.</div>
+    <h4 class="media-heading">Home buyers</h4>
+<p>• Restrictions for owner-occupier lending extended from Auckland to nationwide.</p><p>• Required deposit level remains at 20 per cent for at least 90 per cent of bank lending.</p></div>
   <div class="media-right"> <a href="#"> <img class="media-object" src="img/75X.gif" alt="placeholder image"></a></div>
 </div>
 </div>
