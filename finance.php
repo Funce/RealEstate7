@@ -107,234 +107,49 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-        <div class="media">
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-6 hidden-sm hidden-xs">
-        <div class="media">
-        </div>
-      </div>
-    </div>
-  </div>
+</div>
 </section>
 <hr>
-<div class="container">
-  <div class="row">
-    <div class="col-lg-9 col-md-12">
-<div class="row">
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-          <div class="thumbnail"> <img src="img/400X200.gif" alt="Thumbnail Image 1" class="img-responsive">
-            <div class="caption">
-              <h3>Heading</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              <hr>
-              <p class="text-center"><a href="#" class="btn btn-success" role="button">For Sale</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-          <div class="thumbnail"> <img src="img/400X200.gif" alt="Thumbnail Image 1" class="img-responsive">
-            <div class="caption">
-              <h3>Heading</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              <hr>
-              <p class="text-center"><a href="#" class="btn btn-info" role="button">For Rent</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-6 hidden-sm hidden-xs">
-          <div class="thumbnail"> <img src="img/400X200.gif" alt="Thumbnail Image 1" class="img-responsive">
-            <div class="caption">
-              <h3>Heading</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              <hr>
-              <p class="text-center"><a href="#" class="btn btn-warning" role="button">For Lease</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-          <div class="thumbnail"> <img src="img/400X200.gif" alt="Thumbnail Image 1" class="img-responsive">
-            <div class="caption">
-              <h3>Heading</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              <hr>
-              <p class="text-center"><a href="#" class="btn btn-info" role="button">For Rent</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-          <div class="thumbnail"> <img src="img/400X200.gif" alt="Thumbnail Image 1" class="img-responsive">
-            <div class="caption">
-              <h3>Heading</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              <hr>
-              <p class="text-center"><a href="#" class="btn btn-primary btn-success" role="button">For Sale</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-4 hidden-sm hidden-xs">
-          <div class="thumbnail"> <img src="img/400X200.gif" alt="Thumbnail Image 1" class="img-responsive">
-            <div class="caption">
-              <h3>Heading</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              <hr>
-              <p class="text-center"><a href="#" class="btn btn-warning" role="button">For Lease</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> 
-    <div class="col-lg-3 col-md-6 col-md-offset-3 col-lg-offset-0">
-      <div class="well">
-        <h3 class="text-center">Find Your Home</h3>
-        <form class="form-horizontal">
-          <div class="form-group">
-            <label for="location1" class="control-label">Location</label>
-            <select class="form-control" name="" id="location1">
-              <option selected="selected" value="100">All regions</option>
-	<option value="1">Northland</option>
-	<option value="2">Auckland</option>
-	<option value="3">Waikato</option>
-	<option value="4">Bay of Plenty</option>
-	<option value="5">Gisborne</option>
-	<option value="6">Hawke&#39;s Bay</option>
-	<option value="7">Taranaki</option>
-	<option value="8">Wanganui</option>
-	<option value="9">Manawatu</option>
-	<option value="11">Wairarapa</option>
-	<option value="12">Wellington</option>
-	<option value="13">Nelson Bays</option>
-	<option value="14">Marlborough</option>
-	<option value="15">West Coast</option>
-	<option value="16">Canterbury</option>
-	<option value="17">Timaru - Oamaru</option>
-	<option value="18">Otago</option>
-	<option value="19">Southland</option>
-	<option value="20">Other</option>
-	<option value="50">North Island</option>
-	<option value="60">South Island</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="type1" class="control-label">Type</label>
-            <select class="form-control" name="" id="type1">
-              <option selected="selected" value="101">All</option>
-              <option value="1">For Sale</option>
-              <option value="2">For Rent</option>
-              <option value="3">For Lease</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="pricefrom" class="control-label">Price From</label>
-            <div class="input-group">
-              <div class="input-group-addon" id="basic-addon1">$</div>
-              <input type="text" class="form-control" id="pricefrom" aria-describedby="basic-addon1">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="priceto" class="control-label">Price To</label>
-            <div class="input-group">
-              <div class="input-group-addon" id="basic-addon2">$</div>
-              <input type="text" class="form-control" id="priceto" aria-describedby="basic-addon1">
-            </div>
-          </div>
-          <p class="text-center"><a href="#" class="btn btn-danger" role="button">Search </a></p>
-        </form>
-      </div>
-      <hr>
-      <h3 class="text-center">Agents</h3>
-      <div class="media-object-default">
-        <div class="media">
-          <div class="media-left"> <a href="#"> <img class="media-object img-rounded" src="img/64X64.gif" alt="placeholder image"> </a> </div>
-          <div class="media-body">
-            <h4 class="media-heading">Clayton</h4>
-            <abbr title="Phone">P:</abbr> (123) 456-7890 <a href="mailto:#">clayton@realeastate7.co.nz</a> </div>
-        </div>
-        <div class="media">
-          <div class="media-left"> <a href="#"> <img class="media-object img-rounded" src="img/64X64.gif" alt="placeholder image"> </a> </div>
-          <div class="media-body">
-            <h4 class="media-heading">Elliot</h4>
-            <abbr title="Phone">P:</abbr> (123) 456-7890 <a href="mailto:#">Elliot@realeastate7.co.nz</a> </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<div id="responsive">
+<div class="container"><table>
+  <tr><th>Enter Loan Data:</th>
+    <td></td>
+	<th>Loan Balance, Cumulative Equity, and Interest Payments</th></tr>
+	<tr><td>Amount of the loan ($):</td>
+	<td><input id="amount" onchange="calculate();"></td>
+	<td rowspan=8>
+	  <canvas id="graph" width="400" height="250"></canvas></td></tr>
+	<tr><td>Interest rate (%):</td>
+	  <td><input id="apr" onchange="calculate();"></td></tr>
+	<tr><td>Repayment period (years):</td>
+	  <td><input id="years" onchange="calculate();"></td>
+	<tr><td>Postcode (to find lenders):</td>
+	  <td><input id="zipcode" onchange="calculate();"></td>
+	<tr><th>Approximate Payments:</th>
+	  <td><button onclick="calculate();">Calculate</button></td></tr>
+	<tr><td>Monthly payment:</td>
+	  <td>$<span class="output" id="payment"></span></td></tr>
+	<tr><td>Total payment:</td>
+	  <td>$<span class="output" id="total"></span></td></tr>
+	<tr><td>Total interest:</td>
+	  <td>$<span class="output" id="totalinterest"></span></td></tr>
+	<tr><th>Lenders:</th><td colspan=2>
+	    <div id="lenders"></div></td></tr>
+	</table></div></div>
 <hr>
 <section>
   <div class="container">
     <div class="row">
-      <div class="col-lg-6">
-        <h3>New Properties</h3>
-        <hr>
-        <div class="row">
-          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-            <div class="text-center"> <img src="img/72X72.gif" alt="Thumbnail Image 1"> </div>
-          </div>
-          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-            <div class="text-center"> <img src="img/72X72.gif" alt="Thumbnail Image 1"></div>
-          </div>
-          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-            <div class="text-center"> <img src="img/72X72.gif" alt="Thumbnail Image 1"></div>
-          </div>      
-        </div>
-        <hr>
-        <div class="row">
-          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-            <div class="text-center"> <img src="img/72X72.gif" alt="Thumbnail Image 1"></div>
-          </div>
-          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-            <div class="text-center"> <img src="img/72X72.gif" alt="Thumbnail Image 1"></div>
-</div>
-          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-            <div class="text-center"> <img src="img/72X72.gif" alt="Thumbnail Image 1"></div>
-</div>
-        </div>
-        <hr>
-        <div class="row">
-          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-            <div class="text-center"> <img src="img/72X72.gif" alt="Thumbnail Image 1"></div>
-</div>
-          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-            <div class="text-center"> <img src="img/72X72.gif" alt="Thumbnail Image 1"></div>
-</div>
-          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-            <div class="text-center"> <img src="img/72X72.gif" alt="Thumbnail Image 1"></div>
-</div>
-        </div>
-      </div>
-      <div class="container services">
-      <div class="col-lg-6">
-        <h3>Our Services</h3>
-        <hr>    
-        <ul id="myTab1" class="nav nav-tabs">
-          <li class="active"> <a href="#home1" data-toggle="tab"> <strong>Buying </strong></a> </li>
-          <li><a href="#pane2" data-toggle="tab"><strong>Renting</strong></a></li>
-          <li> <a href="#pane3" data-toggle="tab"><strong>Selling</strong></a> </li>
-        </ul>
-        <div id="myTabContent1" class="tab-content">
-          <div class="tab-pane fade in active" id="home1">
-            <p class="text-center"><img src="img/dreamhome.jpg" alt=""></p>
-            <p>How you approach buying a home depends on your experience.
-Is it your 1st home or is it your 20th?
-Are you looking for an investment or a renovator?
-Perhaps a “trade and flick” or a family home where the kids can grow up?</p>
-          </div>
-          <div class="tab-pane fade" id="pane2">
-            <p class="text-center"><img src="img/rental.jpg" alt=""></p>
-            <p>The question on whether to Rent or Buy a property is one that people often ponder. The answer is very dependent on your financial situation, lifestyle and attitude. Renting is a particularly good option if you enjoy the freedom to move around or if your personal circumstances are likely to change. It easily allows you to give notice and move on with little delay and the financial and legal considerations of having to put your home on the market and sell it.</p>
-          </div>
-          <div class="tab-pane fade" id="pane3">
-            <p class="text-center"><img src="img/selling.jpg" alt=""></p>
-            <p>Statistics suggest that 50% of people consider selling privately.
-30 % actually attempt it, yet in NZ, only 10% of homes are privately sold.
-That’s a big gap.</p>            
-          </div>
-        </div>
-      </div>
-    </div>
+<div class="container services"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Realestate 7 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8860359254163464"
+     data-ad-slot="5366042481"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> </div>
   </div>
 </section>
 <hr>
