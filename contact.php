@@ -104,7 +104,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <hr>
 <div class="container">
   <div class="row">
-    <div class="col-lg-9 col-md-12">
+    <div class="col-lg-12 col-md-12">
 
     <form class="well form-horizontal" action="<a href="mailto:sales@berclay.co.nz>
 <fieldset>
@@ -233,11 +233,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
   </div>
 </div>
-<hr>
 <section>
   <div class="container">
     <div class="row">
-<div class="container services"> </div>
   </div>
 </section>
 <hr>
