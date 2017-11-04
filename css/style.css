@@ -108,3 +108,8 @@ th, td {
     width: 100%;
     background-size: contain;
 }
+.carousel-small-inner > .item > a > img {
+  display: block;
+  max-width: 100%;
+  height: 200;
+}

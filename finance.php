@@ -85,11 +85,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<nav>
 			<div id="main_navigation">
 				<ul class="menu">
-					<li class="current"><a href="index.php">Main</a></li>
+					<li><a href="index.php">Main</a></li>
 					<li><a href="buy.php">Buying</a></li>
 					<li><a href="sell.php">Selling</a></li>
 					<li><a href="rent.php">Renting</a></li>
-					<li><a href="finance.php">Finance</a></li>
+					<li class="current"><a href="finance.php">Finance</a></li>
 					<li><a href="contact.php">Contact Us</a></li>
 				</ul>
 			</div>

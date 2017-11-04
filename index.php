@@ -392,8 +392,10 @@ Addington<br>
    <a class="btn btn-social-icon btn-linkedin">
     <span class="fa fa-linkedin-square"></span>
   </a>
+  <br /><br />
+  <img class="hidden-xs hidden-sm hidden-md" src="img/Realestate 7.png" width="100px" />
 </div>
-  </div>
+  </div> 
 </div>
 <footer class="text-center">
   <div class="container">
