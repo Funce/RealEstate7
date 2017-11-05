@@ -147,7 +147,7 @@ if (isFinite(monthly)){
  // Result was Not-a-Number or infinite, which means the input was
  // incomplete or invalid. Clear any previously displayed output.
  payment.innerHTML = ""; // Erase the content of these elements
- total.innerHTML = ""
+ total.innerHTML = "";
  totalinterest.innerHTML = "";
  chart(); // With no arguments, clears the chart
  }
@@ -212,7 +212,7 @@ function getLenders(amount, apr, years, zipcode) {
  // Display the HTML in the element from above.
  ad.innerHTML = "<ul>" + list + "</ul>";
  }
- }
+ };
 }
 
 // Chart monthly loan balance, interest and equity in an HTML <canvas> element.
