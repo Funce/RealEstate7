@@ -35,6 +35,36 @@
 		return TRUE;
 	}
 
+	function button_class($button_type)
+	{
+		switch($button_type)
+		{
+			case 1:
+				return "btn btn-success";
+			case 2:
+				return "btn btn-info";
+			case 3:
+				return "btn btn-warning";
+			default:
+				return "btn";
+		}
+	}
+
+	function button_text($button_type)
+	{
+		switch($button_type)
+		{
+			case 1:
+				return "For Sale";
+			case 2:
+				return "For Rent";
+			case 3:
+				return "For Lease";
+			default:
+				return "Something went wrong";
+		}
+	}
+
 	function disconnect()
 	// Disconnects from the database. Run at the end if you've included config.
 	{

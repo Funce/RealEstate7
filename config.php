@@ -16,4 +16,7 @@
 	// set up some defines for Role permissions
 	define("ADMIN_LEVEL", 9);
 	define("USER_LEVEL", 1);
+	define("SALE_TYPE", 1);
+	define("RENT_TYPE", 2);
+	define("LEASE_TYPE", 3);
 ?>
