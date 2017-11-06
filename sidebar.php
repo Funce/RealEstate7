@@ -1,14 +1,13 @@
 <div class="well">
         <h3 class="text-center">Find Your Home</h3>
-        <form class="form-horizontal">
+        <form class="form-horizontal" method="get" action="buy.php" >
           <div class="form-group">
             <label for="location1" class="control-label">Location</label>
-            <select class="form-control" name="" id="location1">
-              <option selected="selected" value="100">All regions</option>
+            <select class="form-control" name="location" id="location1">
+              <option selected="selected" value="0">All regions</option>
               <?php
-				$query = "SELECT DISTINCT c_name FROM tbl_city";
+				$query = "SELECT DISTINCT * FROM tbl_city";
 				$result = mysqli_query($link, $query);
-				$counter = 0;
 				while ($row = mysqli_fetch_array($result))
 				{?>
 				<option value="<?php echo $row['c_id'];?>"><?php echo $row['c_name'];?></option>
@@ -20,8 +19,8 @@
           </div>
           <div class="form-group">
             <label for="type1" class="control-label">Type</label>
-            <select class="form-control" name="" id="type1">
-              <option selected="selected" value="101">All</option>
+            <select class="form-control" name="type" id="type1">
+              <option selected="selected" value="0">All</option>
               <option value="1">For Sale</option>
               <option value="2">For Rent</option>
               <option value="3">For Lease</option>
@@ -31,17 +30,17 @@
             <label for="pricefrom" class="control-label">Price From</label>
             <div class="input-group">
               <div class="input-group-addon" id="basic-addon1">$</div>
-              <input type="text" class="form-control" id="pricefrom" aria-describedby="basic-addon1">
+              <input type="text" class="form-control" name="pricefrom" id="pricefrom" aria-describedby="basic-addon1">
             </div>
           </div>
           <div class="form-group">
             <label for="priceto" class="control-label">Price To</label>
             <div class="input-group">
               <div class="input-group-addon" id="basic-addon2">$</div>
-              <input type="text" class="form-control" id="priceto" aria-describedby="basic-addon1">
+              <input type="text" class="form-control" name="priceto" id="priceto" aria-describedby="basic-addon1">
             </div>
           </div>
-          <p class="text-center"><a href="#" class="btn btn-danger" role="button">Search </a></p>
+          <p class="text-center"><input type="submit" name="submit" class="btn btn-danger" role="button"></p>
         </form>
       </div>
       <hr>

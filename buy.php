@@ -1,6 +1,91 @@
 <?php
 	include "config.php";
 	include "library/functions.php";
+	include "library/pagination.php";
+	
+
+	// Creating Modular Queries because why not
+	$location_string = "";
+	$pagination_location = "";
+	if(isset($_GET['location']))
+	{
+		if($_GET['location'])
+		{
+			$location = $_GET['location'];
+			$location_string = "WHERE (c_id=$location)";
+			$pagination_location = "location=$location";
+		}
+	}
+
+	$type_string = "";
+	$pagination_type = "";
+	if(isset($_GET['type']))
+	{
+		if($_GET['type'])
+		{
+			$type = $_GET['type'];
+			if($location_string)
+			{
+				$type_string .= "AND ";
+				$pagination_type .= "&";
+			}
+			else
+			{
+				$type_string .= "WHERE ";
+			}
+			$type_string .= "(p_type=$type)";
+			$pagination_type .= "type=$type";
+		}
+	}
+
+	$pricing_string = "";
+	$pagination_pricefrom = "";
+	$pagination_priceto = "";
+	
+	if(isset($_GET['pricefrom']) or isset($_GET['priceto']))
+	{
+		if($_GET['pricefrom'] != "" or $_GET['priceto'] != "")
+		{
+			if ($location_string or $type_string)
+			{
+				$pricing_string .= "AND ";
+			}
+			else
+			{
+				$pricing_string .= "WHERE ";
+			}
+		}
+	}
+	if(isset($_GET['pricefrom']) and isset($_GET['priceto']))
+	{
+		if($_GET['pricefrom'] != "" and $_GET['priceto'] != "")
+		{
+		$price_from = $_GET['pricefrom'];
+		$price_to = $_GET['priceto'];
+		$pricing_string .= "(p_price BETWEEN $price_from AND $price_to)";
+		$pagination_pricefrom .= "&pricefrom=$price_from";
+		$pagination_priceto .= "&priceto=$price_to";
+		}
+	}
+	elseif(isset($_GET['pricefrom']))
+	{
+		if($_GET['pricefrom'] != "")
+		{
+			$price_from = $_GET['pricefrom'];
+			$pricing_string .= "(p_price >= $price_from)";
+			$pagination_pricefrom .= "&pricefrom=$price_from";
+		}
+	}
+	elseif(isset($_GET['priceto']))
+	{
+		if($_GET['priceto'] != "")
+		{
+			$price_to = $GET['priceto'];
+			$pricing_string .= "(p_price <= $price_to)";
+			$pagination_priceto .= "&priceto=$price_to";
+		}
+	}
+	
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +95,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[`0`],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-KJGS4HC');</script>
@@ -121,289 +206,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="container">
   <div class="row">
     <div class="col-lg-9 col-md-12">
-<div class="row">
+	  <div class="row">
+        <?php
+		  	$rowsPerPage = 9;
+			$query = "SELECT * from tbl_property JOIN tbl_image ON p_id=i_p_id JOIN tbl_city ON p_c_id=c_id ".$location_string.$type_string.$pricing_string." ORDER BY p_id DESC"; // Gets property all images and city name
+			$pagingLink = getPagingLink($query, $rowsPerPage, "".$pagination_location.$pagination_type.$pagination_pricefrom.$pagination_priceto);
+		  	$result = mysqli_query($link, getPagingQuery($query, $rowsPerPage));
+		  	while ($row=mysqli_fetch_array($result))
+			{
+				$property_type = $row['p_type'];
+	    ?>
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-          <div class="thumbnail"> <img src="img/400X200.gif" alt="Thumbnail Image 1" class="img-responsive">
+          <div class="thumbnail"> <img src="img/<?php echo $row['i_name'];?>" alt="<?php echo $row['p_title'];?>" class="img-responsive">
             <div class="caption">
-              <h3>Heading</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              <h3><?php echo $row['p_title'];?></h3>
+              <p><?php echo $row['p_address'];?><br />
+              <?php echo $row['c_name'];?></p>
               <hr>
-              <p class="text-center"><a href="#" class="btn btn-success" role="button">For Sale</a></p>
+              <p class="text-center"><a href="#" class="<?php echo button_class($property_type);?>" role="button"><?php echo button_text($property_type);?></a></p>
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-          <div class="thumbnail"> <img src="img/400X200.gif" alt="Thumbnail Image 1" class="img-responsive">
-            <div class="caption">
-              <h3>Heading</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              <hr>
-              <p class="text-center"><a href="#" class="btn btn-info" role="button">For Rent</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-6 hidden-sm hidden-xs">
-          <div class="thumbnail"> <img src="img/400X200.gif" alt="Thumbnail Image 1" class="img-responsive">
-            <div class="caption">
-              <h3>Heading</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              <hr>
-              <p class="text-center"><a href="#" class="btn btn-warning" role="button">For Lease</a></p>
-            </div>
-          </div>
-        </div>
+        <?php
+			}
+		  ?>
       </div>
-      <div class="row">
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-          <div class="thumbnail"> <img src="img/400X200.gif" alt="Thumbnail Image 1" class="img-responsive">
-            <div class="caption">
-              <h3>Heading</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              <hr>
-              <p class="text-center"><a href="#" class="btn btn-info" role="button">For Rent</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-          <div class="thumbnail"> <img src="img/400X200.gif" alt="Thumbnail Image 1" class="img-responsive">
-            <div class="caption">
-              <h3>Heading</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              <hr>
-              <p class="text-center"><a href="#" class="btn btn-primary btn-success" role="button">For Sale</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-4 hidden-sm hidden-xs">
-          <div class="thumbnail"> <img src="img/400X200.gif" alt="Thumbnail Image 1" class="img-responsive">
-            <div class="caption">
-              <h3>Heading</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              <hr>
-              <p class="text-center"><a href="#" class="btn btn-warning" role="button">For Lease</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h3 style="text-align: center;">
+      	<?php echo $pagingLink; //display the paging links because you need it ?>
+      </h3>
     </div> 
     <div class="col-lg-3 col-md-6 col-md-offset-3 col-lg-offset-0">
-      <div class="well">
-        <h3 class="text-center">Find Your Home</h3>
-        <form class="form-horizontal">
-          <div class="form-group">
-            <label for="location1" class="control-label">Location</label>
-            <select class="form-control" name="" id="location1">
-              <option selected="selected" value="100">All regions</option>
-	<option value="1">Northland</option>
-	<option value="2">Auckland</option>
-	<option value="3">Waikato</option>
-	<option value="4">Bay of Plenty</option>
-	<option value="5">Gisborne</option>
-	<option value="6">Hawke&#39;s Bay</option>
-	<option value="7">Taranaki</option>
-	<option value="8">Wanganui</option>
-	<option value="9">Manawatu</option>
-	<option value="11">Wairarapa</option>
-	<option value="12">Wellington</option>
-	<option value="13">Nelson Bays</option>
-	<option value="14">Marlborough</option>
-	<option value="15">West Coast</option>
-	<option value="16">Canterbury</option>
-	<option value="17">Timaru - Oamaru</option>
-	<option value="18">Otago</option>
-	<option value="19">Southland</option>
-	<option value="20">Other</option>
-	<option value="50">North Island</option>
-	<option value="60">South Island</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="type1" class="control-label">Type</label>
-            <select class="form-control" name="" id="type1">
-              <option value="101">All</option>
-              <option selected="selected" value="1">For Sale</option>
-              <option value="2">For Rent</option>
-              <option value="3">For Lease</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="pricefrom" class="control-label">Price From</label>
-            <div class="input-group">
-              <div class="input-group-addon" id="basic-addon1">$</div>
-              <input type="text" class="form-control" id="pricefrom" aria-describedby="basic-addon1">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="priceto" class="control-label">Price To</label>
-            <div class="input-group">
-              <div class="input-group-addon" id="basic-addon2">$</div>
-              <input type="text" class="form-control" id="priceto" aria-describedby="basic-addon1">
-            </div>
-          </div>
-          <p class="text-center"><a href="#" class="btn btn-danger" role="button">Search </a></p>
-        </form>
-      </div>
-      <hr>
-      <h3 class="text-center">Agents</h3>
-      <div class="media-object-default">
-        <div class="media">
-          <div class="media-left"> <a href="#"> <img class="media-object img-rounded" src="img/64X64.gif" alt="placeholder image"> </a> </div>
-          <div class="media-body">
-            <h4 class="media-heading">Clayton</h4>
-            <abbr title="Phone">P:</abbr> (123) 456-7890 <a href="mailto:#">clayton@realeastate7.co.nz</a> </div>
-        </div>
-        <div class="media">
-          <div class="media-left"> <a href="#"> <img class="media-object img-rounded" src="img/64X64.gif" alt="placeholder image"> </a> </div>
-          <div class="media-body">
-            <h4 class="media-heading">Elliot</h4>
-            <abbr title="Phone">P:</abbr> (123) 456-7890 <a href="mailto:#">Elliot@realeastate7.co.nz</a> </div>
-        </div>
-      </div>
+      <?php include "sidebar.php";?>
     </div>
   </div>
 </div>
 <hr>
-<section>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6">
-        <h3>New Properties</h3>
-        <hr>
-        <div class="row">
-          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-            <div class="text-center"> <img src="img/72X72.gif" alt="Thumbnail Image 1"> </div>
-          </div>
-          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-            <div class="text-center"> <img src="img/72X72.gif" alt="Thumbnail Image 1"></div>
-          </div>
-          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-            <div class="text-center"> <img src="img/72X72.gif" alt="Thumbnail Image 1"></div>
-          </div>      
-        </div>
-        <hr>
-        <div class="row">
-          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-            <div class="text-center"> <img src="img/72X72.gif" alt="Thumbnail Image 1"></div>
-          </div>
-          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-            <div class="text-center"> <img src="img/72X72.gif" alt="Thumbnail Image 1"></div>
-</div>
-          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-            <div class="text-center"> <img src="img/72X72.gif" alt="Thumbnail Image 1"></div>
-</div>
-        </div>
-        <hr>
-        <div class="row">
-          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-            <div class="text-center"> <img src="img/72X72.gif" alt="Thumbnail Image 1"></div>
-</div>
-          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-            <div class="text-center"> <img src="img/72X72.gif" alt="Thumbnail Image 1"></div>
-</div>
-          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-            <div class="text-center"> <img src="img/72X72.gif" alt="Thumbnail Image 1"></div>
-</div>
-        </div>
-      </div>
-      <div class="container services">
-      <div class="col-lg-6">
-        <h3>Our Services</h3>
-        <hr>    
-        <ul id="myTab1" class="nav nav-tabs">
-          <li class="active"> <a href="#home1" data-toggle="tab"> <strong>Buying </strong></a> </li>
-          <li><a href="#pane2" data-toggle="tab"><strong>Renting</strong></a></li>
-          <li> <a href="#pane3" data-toggle="tab"><strong>Selling</strong></a> </li>
-        </ul>
-        <div id="myTabContent1" class="tab-content">
-          <div class="tab-pane fade in active" id="home1">
-            <p class="text-center"><img src="img/dreamhome.jpg" alt=""></p>
-            <p>How you approach buying a home depends on your experience.
-Is it your 1st home or is it your 20th?
-Are you looking for an investment or a renovator?
-Perhaps a “trade and flick” or a family home where the kids can grow up?</p>
-          </div>
-          <div class="tab-pane fade" id="pane2">
-            <p class="text-center"><img src="img/rental.jpg" alt=""></p>
-            <p>The question on whether to Rent or Buy a property is one that people often ponder. The answer is very dependent on your financial situation, lifestyle and attitude. Renting is a particularly good option if you enjoy the freedom to move around or if your personal circumstances are likely to change. It easily allows you to give notice and move on with little delay and the financial and legal considerations of having to put your home on the market and sell it.</p>
-          </div>
-          <div class="tab-pane fade" id="pane3">
-            <p class="text-center"><img src="img/selling.jpg" alt=""></p>
-            <p>Statistics suggest that 50% of people consider selling privately.
-30 % actually attempt it, yet in NZ, only 10% of homes are privately sold.
-That’s a big gap.</p>            
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<hr>
-<div class="container well">
-  <div class="row">
-<div class="col-xs-6 col-sm-6 col-lg-4 col-md-4"> <span class="text-right">
-      </span>
-  <h3>About Us</h3>
-  <hr>
-  <p>Our approach is founded on providing personal service through individual Property Managers with an underlying philosophy of treating your property as if it were our own.</p>
-  <p>Real Estate 7 comprises of an experienced, motivated and specialised team of dedicated people.</p>
-  <p>Our continual striving for excellent customer service is the cornerstone of our success. Our goal is to exceed customer expectations wherever possible and make business with us enjoyable.</p>
-</div>
-<div class="col-xs-6 col-sm-6 col-lg-4 col-md-4 hidden-sm hidden-xs"> <span class="text-right"> </span>
-  <h3>Latest News</h3>
-  <hr>
-  <div class="media-object-default">
-  <div class="media">
-  <div class="media-body">
-        <h4 class="media-heading">Investors</h4>
-	  <p>• Restrictions for investor lending extended from nationwide from Auckland only. <p>• Banks will be forced to require a 40 per cent deposit - up from 30 per cent - for at least 95 per cent of the loans they make in this area.</p></div>
-      <div class="media-right"> <a href="#"> <img class="media-object" src="img/75X.gif" alt="placeholder image"></a></div>
-</div>
-<div class="media">
-  <div class="media-body">
-    <h4 class="media-heading">Home buyers</h4>
-<p>• Restrictions for owner-occupier lending extended from Auckland to nationwide.</p><p>• Required deposit level remains at 20 per cent for at least 90 per cent of bank lending.</p></div>
-  <div class="media-right"> <a href="#"> <img class="media-object" src="img/75X.gif" alt="placeholder image"></a></div>
-</div>
-</div>
-</div>
-<div class="col-xs-6 col-sm-6 col-lg-4 col-md-4"> <span class="text-right"> </span>
-  <h3>Contact Us</h3>
-  <hr>
-  <address>
-  <strong>RealEstate 7</strong><br>
-50 Hazeldead Ave<br>
-Addington<br>
-  </address>
-  <address>
-        <strong>Contact</strong><br>
-        <a href="mailto:#">sales@berclay.co.nz</a>
-      </address>
-      <a class="btn btn-social-icon btn-facebook">
-    <span class="fa fa-facebook-square"></span>
-  </a>
-   <a class="btn btn-social-icon btn-google plus">
-    <span class="fa fa-google-plus-square"></span>
-  </a>
-   </a>
-   <a class="btn btn-social-icon btn-twitter">
-    <span class="fa fa-twitter-square"></span>
-  </a>
-   </a>
-   <a class="btn btn-social-icon btn-linkedin">
-    <span class="fa fa-linkedin-square"></span>
-  </a>
-</div>
-  </div>
-</div>
-<footer class="text-center">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <p><strong>Copyright © Clayton & Elliot. All rights reserved.</strong></p>
-      </div>
-    </div>
-  </div>
-</footer>
+<?php include "footer.php"; ?>
 <!-- jQuery --> 
 <script src="js/jquery-1.11.3.min.js"></script> 
 <!-- Bootstrap JS --> -> 
