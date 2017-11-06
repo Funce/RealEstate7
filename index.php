@@ -121,144 +121,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="container">
   <div class="row">
     <div class="col-lg-9 col-md-12">
-<div class="row">
+	  <div class="row">
+       <?php
+			$query = "SELECT * from tbl_property JOIN tbl_image ON p_id=i_p_id JOIN tbl_city ON p_c_id=c_id ORDER BY p_id ASC";
+			$result = mysqli_query($link, $query);
+			$counter = 0;
+			while ($row = mysqli_fetch_array($result) and $counter < 6)
+			{
+				$counter++;
+				$property_type = $row['p_type'];
+		?>
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-          <div class="thumbnail"> <img src="img/400X200.gif" alt="Thumbnail Image 1" class="img-responsive">
+          <div class="thumbnail"> <img src="img/<?php echo $row['i_name'];?>" alt="<?php echo $row['p_title'];?>" class="img-responsive">
             <div class="caption">
-              <h3>Heading</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              <h3><?php echo $row['p_title'];?></h3>
+              <p><?php echo $row['p_address'];?><br />
+              <?php echo $row['c_name'];?></p>
               <hr>
-              <p class="text-center"><a href="#" class="btn btn-success" role="button">For Sale</a></p>
+              <p class="text-center"><a href="#" class="<?php echo button_class($property_type);?>" role="button"><?php echo button_text($property_type);?></a></p>
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-          <div class="thumbnail"> <img src="img/400X200.gif" alt="Thumbnail Image 1" class="img-responsive">
-            <div class="caption">
-              <h3>Heading</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              <hr>
-              <p class="text-center"><a href="#" class="btn btn-info" role="button">For Rent</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-6 hidden-sm hidden-xs">
-          <div class="thumbnail"> <img src="img/400X200.gif" alt="Thumbnail Image 1" class="img-responsive">
-            <div class="caption">
-              <h3>Heading</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              <hr>
-              <p class="text-center"><a href="#" class="btn btn-warning" role="button">For Lease</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-          <div class="thumbnail"> <img src="img/400X200.gif" alt="Thumbnail Image 1" class="img-responsive">
-            <div class="caption">
-              <h3>Heading</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              <hr>
-              <p class="text-center"><a href="#" class="btn btn-info" role="button">For Rent</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-          <div class="thumbnail"> <img src="img/400X200.gif" alt="Thumbnail Image 1" class="img-responsive">
-            <div class="caption">
-              <h3>Heading</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              <hr>
-              <p class="text-center"><a href="#" class="btn btn-primary btn-success" role="button">For Sale</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-4 hidden-sm hidden-xs">
-          <div class="thumbnail"> <img src="img/400X200.gif" alt="Thumbnail Image 1" class="img-responsive">
-            <div class="caption">
-              <h3>Heading</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              <hr>
-              <p class="text-center"><a href="#" class="btn btn-warning" role="button">For Lease</a></p>
-            </div>
-          </div>
-        </div>
+        <?php
+				}
+		  		mysqli_free_result();
+		?>
       </div>
     </div> 
     <div class="col-lg-3 col-md-6 col-md-offset-3 col-lg-offset-0">
-      <div class="well">
-        <h3 class="text-center">Find Your Home</h3>
-        <form class="form-horizontal">
-          <div class="form-group">
-            <label for="location1" class="control-label">Location</label>
-            <select class="form-control" name="" id="location1">
-              <option selected="selected" value="100">All regions</option>
-	<option value="1">Northland</option>
-	<option value="2">Auckland</option>
-	<option value="3">Waikato</option>
-	<option value="4">Bay of Plenty</option>
-	<option value="5">Gisborne</option>
-	<option value="6">Hawke&#39;s Bay</option>
-	<option value="7">Taranaki</option>
-	<option value="8">Wanganui</option>
-	<option value="9">Manawatu</option>
-	<option value="11">Wairarapa</option>
-	<option value="12">Wellington</option>
-	<option value="13">Nelson Bays</option>
-	<option value="14">Marlborough</option>
-	<option value="15">West Coast</option>
-	<option value="16">Canterbury</option>
-	<option value="17">Timaru - Oamaru</option>
-	<option value="18">Otago</option>
-	<option value="19">Southland</option>
-	<option value="20">Other</option>
-	<option value="50">North Island</option>
-	<option value="60">South Island</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="type1" class="control-label">Type</label>
-            <select class="form-control" name="" id="type1">
-              <option selected="selected" value="101">All</option>
-              <option value="1">For Sale</option>
-              <option value="2">For Rent</option>
-              <option value="3">For Lease</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="pricefrom" class="control-label">Price From</label>
-            <div class="input-group">
-              <div class="input-group-addon" id="basic-addon1">$</div>
-              <input type="text" class="form-control" id="pricefrom" aria-describedby="basic-addon1">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="priceto" class="control-label">Price To</label>
-            <div class="input-group">
-              <div class="input-group-addon" id="basic-addon2">$</div>
-              <input type="text" class="form-control" id="priceto" aria-describedby="basic-addon1">
-            </div>
-          </div>
-          <p class="text-center"><a href="#" class="btn btn-danger" role="button">Search </a></p>
-        </form>
-      </div>
-      <hr>
-      <h3 class="text-center">Agents</h3>
-      <div class="media-object-default">
-        <div class="media">
-          <div class="media-left"> <a href="#"> <img class="media-object img-rounded" src="img/64X64.gif" alt="placeholder image"> </a> </div>
-          <div class="media-body">
-            <h4 class="media-heading">Clayton</h4>
-            <abbr title="Phone">P:</abbr> (123) 456-7890 <a href="mailto:#">clayton@realeastate7.co.nz</a> </div>
-        </div>
-        <div class="media">
-          <div class="media-left"> <a href="#"> <img class="media-object img-rounded" src="img/64X64.gif" alt="placeholder image"> </a> </div>
-          <div class="media-body">
-            <h4 class="media-heading">Elliot</h4>
-            <abbr title="Phone">P:</abbr> (123) 456-7890 <a href="mailto:#">Elliot@realeastate7.co.nz</a> </div>
-        </div>
-      </div>
+      <?php include "sidebar.php";?>
     </div>
   </div>
 </div>
