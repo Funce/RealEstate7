@@ -15,7 +15,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-KJGS4HC');</script>
 <!-- End Google Tag Manager -->
-<title>Real Estate 7</title>
+<title>Real Estate 7 - Register</title>
 
 <!-- Bootstrap -->
 <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css">
@@ -46,12 +46,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="#"><span class="glyphicon glyphicon-user"></span> <strong>Sign Up</strong></a></li>
       <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> <strong>Login</strong></a></li>
-      <li><a href="wish.php" class="btn btn-warning btn-xs"><strong>Dreamlist</strong></a></li>
+		<li><a href="wish.php" class="btn btn-warning btn-xs"><strong>Dreamlist</strong></a></li>
       <li class="visible-xs-inline"><a href="index.php">Home</a></li>
       <li class="visible-xs-inline"><a href="buy.php">Buying</a></li>
       <li class="visible-xs-inline"><a href="sell.php">Selling</a></li>
       <li class="visible-xs-inline"><a href="finance.php">Finance</a></li>
-      <li class="visible-xs-inline"><a href="contact.php">Contact Us</a></li>
+		<li class="visible-xs-inline"><a href="contact.php">Contact Us</a></li>
     </ul>
     </div>
     <!-- /.navbar-collapse --> 
@@ -80,7 +80,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<li><a href="index.php">Main</a></li>
 					<li><a href="buy.php">Buying</a></li>
 					<li><a href="sell.php">Selling</a></li>
-					<li class="current"><a href="finance.php">Finance</a></li>
+					<li class="current"><a href="reg.php">Register</a></li>
+					<li><a href="finance.php">Finance</a></li>
 					<li><a href="contact.php">Contact Us</a></li>
 				</ul>
 			</div>
@@ -90,50 +91,78 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <hr>
   </div>
 <section>
+	<div class="responsive> 
   <div class="container">
-    
 </section>
 <hr>
-<div id="responsive">
-<div class="container"><table>
-  <tr><th>Enter Loan Data:</th>
-    <td></td>
-	<th>Loan Balance, Cumulative Equity, and Interest Payments</th></tr>
-	<tr><td>Amount of the loan ($):</td>
-	<td><input id="amount" onchange="calculate();"></td>
-	<td rowspan=8>
-	  <canvas id="graph" width="400" height="250"></canvas></td></tr>
-	<tr><td>Interest rate (%):</td>
-	  <td><input id="apr" onchange="calculate();"></td></tr>
-	<tr><td>Repayment period (years):</td>
-	  <td><input id="years" onchange="calculate();"></td>
-	<tr><td>Postcode (to find lenders):</td>
-	  <td><input id="zipcode" onchange="calculate();"></td>
-	<tr><th>Approximate Payments:</th>
-	  <td><button onclick="calculate();">Calculate</button></td></tr>
-	<tr><td>Monthly payment:</td>
-	  <td>$<span class="output" id="payment"></span></td></tr>
-	<tr><td>Total payment:</td>
-	  <td>$<span class="output" id="total"></span></td></tr>
-	<tr><td>Total interest:</td>
-	  <td>$<span class="output" id="totalinterest"></span></td></tr>
-	<tr><th>Lenders:</th><td colspan=2>
-	    <div id="lenders"></div></td></tr>
-	</table></div></div>
+<div class="container">
+					  
+	<div class="row">
+	<div class="col-lg-2"> </div>
+
+	<div class="col-lg-6">
+	<h3>Register</h3>
+	<form action="...php">
+  <strong>Name:</strong></di><br>
+  <input type="text" name="name" value=""><br>
+  <strong>Email:</strong></di><br>
+  <input type="text" name="email" value=""><br>
+  <strong>Password:</strong></di><br>
+  <input type="text" name="password" value=""><br><br>
+  <input type="submit" value="Submit">
+</form>
+	</div>
+  </div>
+ </div>
+</div>
 <hr>
 <section>
   <div class="container">
     <div class="row">
-<div class="container services"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- Realestate 7 -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-8860359254163464"
-     data-ad-slot="5366042481"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script> </div>
+      <div class="col-lg-6">
+        <h3>New Properties</h3>
+        <hr>
+        <div class="row">
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="text-center"> <img src="img/72X72.gif" alt="Thumbnail Image 1"> </div>
+          </div>
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="text-center"> <img src="img/72X72.gif" alt="Thumbnail Image 1"></div>
+          </div>
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="text-center"> <img src="img/72X72.gif" alt="Thumbnail Image 1"></div>
+          </div>      
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="text-center"> <img src="img/72X72.gif" alt="Thumbnail Image 1"></div>
+          </div>
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="text-center"> <img src="img/72X72.gif" alt="Thumbnail Image 1"></div>
+</div>
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="text-center"> <img src="img/72X72.gif" alt="Thumbnail Image 1"></div>
+</div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="text-center"> <img src="img/72X72.gif" alt="Thumbnail Image 1"></div>
+</div>
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="text-center"> <img src="img/72X72.gif" alt="Thumbnail Image 1"></div>
+</div>
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="text-center"> <img src="img/72X72.gif" alt="Thumbnail Image 1"></div>
+</div>
+        </div>
+      </div>
+      <div class="container services">
+      
+      </div>
+    </div>
+  </div>
   </div>
 </section>
 <hr>
@@ -192,7 +221,7 @@ Addington<br>
     <span class="fa fa-linkedin-square"></span>
   </a>
 </div>
-  </div>
+  </div> 
 </div>
 <footer class="text-center">
   <div class="container">

@@ -29,14 +29,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Custom CSS -->
 <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
 
-
-
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -49,17 +41,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myInverseNavbar2" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
       <a class="navbar-brand" href="http://realestate7.serverup.xyz/?i=1"><img class="img-responsive" src="img/logo.jpg" alt="thumb"> </a> </div>
-    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Nav and Toggle -->   
     <div class="collapse navbar-collapse" id="myInverseNavbar2">
-    <ul class="nav navbar-nav navbar-right">
+    <ul class="nav navbar-nav navbar-right"> 
       <li><a href="#"><span class="glyphicon glyphicon-user"></span> <strong>Sign Up</strong></a></li>
       <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> <strong>Login</strong></a></li>
+		<li><a href="wish.php" class="btn btn-warning btn-xs"><strong>Dreamlist</strong></a></li>
       <li class="visible-xs-inline"><a href="index.php">Home</a></li>
       <li class="visible-xs-inline"><a href="buy.php">Buying</a></li>
       <li class="visible-xs-inline"><a href="sell.php">Selling</a></li>
-      <li class="visible-xs-inline"><a href="rent.php">Renting</a></li>
       <li class="visible-xs-inline"><a href="finance.php">Finance</a></li>
-      <li class="visible-xs-inline"><a href="contact.php">Contact Us</a></li>
+		<li class="visible-xs-inline"><a href="contact.php">Contact Us</a></li>
     </ul>
     </div>
     <!-- /.navbar-collapse --> 
@@ -88,7 +80,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<li class="current"><a href="index.php">Main</a></li>
 					<li><a href="buy.php">Buying</a></li>
 					<li><a href="sell.php">Selling</a></li>
-					<li><a href="rent.php">Renting</a></li>
 					<li><a href="finance.php">Finance</a></li>
 					<li><a href="contact.php">Contact Us</a></li>
 				</ul>
@@ -121,35 +112,144 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="container">
   <div class="row">
     <div class="col-lg-9 col-md-12">
-	  <div class="row">
-       <?php
-			$query = "SELECT * from tbl_property JOIN tbl_image ON p_id=i_p_id JOIN tbl_city ON p_c_id=c_id ORDER BY p_id ASC";
-			$result = mysqli_query($link, $query);
-			$counter = 0;
-			while ($row = mysqli_fetch_array($result) and $counter < 6)
-			{
-				$counter++;
-				$property_type = $row['p_type'];
-		?>
+<div class="row">
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-          <div class="thumbnail"> <img src="img/<?php echo $row['i_name'];?>" alt="<?php echo $row['p_title'];?>" class="img-responsive">
+          <div class="thumbnail"> <img src="img/400X200.gif" alt="Thumbnail Image 1" class="img-responsive">
             <div class="caption">
-              <h3><?php echo $row['p_title'];?></h3>
-              <p><?php echo $row['p_address'];?><br />
-              <?php echo $row['c_name'];?></p>
+              <h3>Heading</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
               <hr>
-              <p class="text-center"><a href="#" class="<?php echo button_class($property_type);?>" role="button"><?php echo button_text($property_type);?></a></p>
+              <p class="text-center"><a href="#" class="btn btn-success" role="button">For Sale</a></p>
             </div>
           </div>
         </div>
-        <?php
-				}
-		  		mysqli_free_result();
-		?>
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+          <div class="thumbnail"> <img src="img/400X200.gif" alt="Thumbnail Image 1" class="img-responsive">
+            <div class="caption">
+              <h3>Heading</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              <hr>
+              <p class="text-center"><a href="#" class="btn btn-info" role="button">For Rent</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6 hidden-sm hidden-xs">
+          <div class="thumbnail"> <img src="img/400X200.gif" alt="Thumbnail Image 1" class="img-responsive">
+            <div class="caption">
+              <h3>Heading</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              <hr>
+              <p class="text-center"><a href="#" class="btn btn-warning" role="button">For Lease</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+          <div class="thumbnail"> <img src="img/400X200.gif" alt="Thumbnail Image 1" class="img-responsive">
+            <div class="caption">
+              <h3>Heading</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              <hr>
+              <p class="text-center"><a href="#" class="btn btn-info" role="button">For Rent</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+          <div class="thumbnail"> <img src="img/400X200.gif" alt="Thumbnail Image 1" class="img-responsive">
+            <div class="caption">
+              <h3>Heading</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              <hr>
+              <p class="text-center"><a href="#" class="btn btn-primary btn-success" role="button">For Sale</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 hidden-sm hidden-xs">
+          <div class="thumbnail"> <img src="img/400X200.gif" alt="Thumbnail Image 1" class="img-responsive">
+            <div class="caption">
+              <h3>Heading</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              <hr>
+              <p class="text-center"><a href="#" class="btn btn-warning" role="button">For Lease</a></p>
+            </div>
+          </div>
+        </div>
       </div>
     </div> 
     <div class="col-lg-3 col-md-6 col-md-offset-3 col-lg-offset-0">
-      <?php include "sidebar.php";?>
+      <div class="well">
+        <h3 class="text-center">Find Your Home</h3>
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label for="location1" class="control-label">Location</label>
+            <select class="form-control" name="" id="location1">
+              <option selected="selected" value="100">All regions</option>
+	<option value="1">Northland</option>
+	<option value="2">Auckland</option>
+	<option value="3">Waikato</option>
+	<option value="4">Bay of Plenty</option>
+	<option value="5">Gisborne</option>
+	<option value="6">Hawke&#39;s Bay</option>
+	<option value="7">Taranaki</option>
+	<option value="8">Wanganui</option>
+	<option value="9">Manawatu</option>
+	<option value="11">Wairarapa</option>
+	<option value="12">Wellington</option>
+	<option value="13">Nelson Bays</option>
+	<option value="14">Marlborough</option>
+	<option value="15">West Coast</option>
+	<option value="16">Canterbury</option>
+	<option value="17">Timaru - Oamaru</option>
+	<option value="18">Otago</option>
+	<option value="19">Southland</option>
+	<option value="20">Other</option>
+	<option value="50">North Island</option>
+	<option value="60">South Island</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="type1" class="control-label">Type</label>
+            <select class="form-control" name="" id="type1">
+              <option selected="selected" value="101">All</option>
+              <option value="1">For Sale</option>
+              <option value="2">For Rent</option>
+              <option value="3">For Lease</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="pricefrom" class="control-label">Price From</label>
+            <div class="input-group">
+              <div class="input-group-addon" id="basic-addon1">$</div>
+              <input type="text" class="form-control" id="pricefrom" aria-describedby="basic-addon1">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="priceto" class="control-label">Price To</label>
+            <div class="input-group">
+              <div class="input-group-addon" id="basic-addon2">$</div>
+              <input type="text" class="form-control" id="priceto" aria-describedby="basic-addon1">
+            </div>
+          </div>
+          <p class="text-center"><a href="#" class="btn btn-danger" role="button">Search </a></p>
+        </form>
+      </div>
+      <hr>
+      <h3 class="text-center">Agents</h3>
+      <div class="media-object-default">
+        <div class="media">
+          <div class="media-left"> <a href="#"> <img class="media-object img-rounded" src="img/64X64.gif" alt="placeholder image"> </a> </div>
+          <div class="media-body">
+            <h4 class="media-heading">Clayton</h4>
+            <abbr title="Phone">P:</abbr> (123) 456-7890 <a href="mailto:#">clayton@realeastate7.co.nz</a> </div>
+        </div>
+        <div class="media">
+          <div class="media-left"> <a href="#"> <img class="media-object img-rounded" src="img/64X64.gif" alt="placeholder image"> </a> </div>
+          <div class="media-body">
+            <h4 class="media-heading">Elliot</h4>
+            <abbr title="Phone">P:</abbr> (123) 456-7890 <a href="mailto:#">Elliot@realeastate7.co.nz</a> </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -229,7 +329,74 @@ That’s a big gap.</p>
   </div>
 </section>
 <hr>
-<?php include "footer.php"; ?>
+<div class="container well">
+  <div class="row">
+<div class="col-xs-6 col-sm-6 col-lg-4 col-md-4"> <span class="text-right">
+      </span>
+  <h3>About Us</h3>
+  <hr>
+  <p>Our approach is founded on providing personal service through individual Property Managers with an underlying philosophy of treating your property as if it were our own.</p>
+  <p>Real Estate 7 comprises of an experienced, motivated and specialised team of dedicated people.</p>
+  <p>Our continual striving for excellent customer service is the cornerstone of our success. Our goal is to exceed customer expectations wherever possible and make business with us enjoyable.</p>
+</div>
+<div class="col-xs-6 col-sm-6 col-lg-4 col-md-4 hidden-sm hidden-xs"> <span class="text-right"> </span>
+  <h3>Latest News</h3>
+  <hr>
+  <div class="media-object-default">
+  <div class="media">
+  <div class="media-body">
+        <h4 class="media-heading">Investors</h4>
+	  <p>• Restrictions for investor lending extended from nationwide from Auckland only. <p>• Banks will be forced to require a 40 per cent deposit - up from 30 per cent - for at least 95 per cent of the loans they make in this area.</p></div>
+      <div class="media-right"> <a href="#"> <img class="media-object" src="img/75X.gif" alt="placeholder image"></a></div>
+</div>
+<div class="media">
+  <div class="media-body">
+    <h4 class="media-heading">Home buyers</h4>
+<p>• Restrictions for owner-occupier lending extended from Auckland to nationwide.</p><p>• Required deposit level remains at 20 per cent for at least 90 per cent of bank lending.</p></div>
+  <div class="media-right"> <a href="#"> <img class="media-object" src="img/75X.gif" alt="placeholder image"></a></div>
+</div>
+</div>
+</div>
+<div class="col-xs-6 col-sm-6 col-lg-4 col-md-4"> <span class="text-right"> </span>
+  <h3>Contact Us</h3>
+  <hr>
+  <address>
+  <strong>RealEstate 7</strong><br>
+50 Hazeldead Ave<br>
+Addington<br>
+  </address>
+  <address>
+        <strong>Contact</strong><br>
+        <a href="mailto:#">sales@berclay.co.nz</a>
+      </address>
+      <a class="btn btn-social-icon btn-facebook">
+    <span class="fa fa-facebook-square"></span>
+  </a>
+   <a class="btn btn-social-icon btn-google plus">
+    <span class="fa fa-google-plus-square"></span>
+  </a>
+   </a>
+   <a class="btn btn-social-icon btn-twitter">
+    <span class="fa fa-twitter-square"></span>
+  </a>
+   </a>
+   <a class="btn btn-social-icon btn-linkedin">
+    <span class="fa fa-linkedin-square"></span>
+  </a>
+  <br /><br />
+  <img class="hidden-xs hidden-sm hidden-md" src="img/Realestate 7.png" width="100px" />
+</div>
+  </div> 
+</div>
+<footer class="text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <p><strong>Copyright © Clayton & Elliot. All rights reserved.</strong></p>
+      </div>
+    </div>
+  </div>
+</footer>
 <!-- jQuery --> 
 <script src="js/jquery-1.11.3.min.js"></script> 
 <!-- Bootstrap JS --> -> 

@@ -38,7 +38,7 @@ a.color-1:hover {text-decoration:underline;}
 .font-3 {font-size:17px; line-height:33px; color:#292929;}
 h2 { font-size:36px; line-height:45px; color:#fff; font-weight:normal; letter-spacing:-1px;}
 h3 { font-size:24px; line-height:30px; color:#fff; font-weight:normal; }
-ul {margin:0; padding:0;list-style-image:none;}
+ul {margin:0; padding:0;list-style-image:none; list-style-type: none;}
 ul.list-1 li {padding:0px 0 0px 11px; line-height:25px; background:url(../img/marker.gif) 0 10px no-repeat;}
 ul.list-1 li a { font-size:14px; color:#fff; line-height:25px;}
 ul.list-1 li a:hover {color:#2098f5;}

@@ -114,14 +114,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Custom CSS -->
 <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
 
-
-
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -139,10 +131,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="#"><span class="glyphicon glyphicon-user"></span> <strong>Sign Up</strong></a></li>
       <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> <strong>Login</strong></a></li>
+      <li><a href="wish.php" class="btn btn-warning btn-xs"><strong>Dreamlist</strong></a></li>
       <li class="visible-xs-inline"><a href="index.php">Home</a></li>
       <li class="visible-xs-inline"><a href="buy.php">Buying</a></li>
       <li class="visible-xs-inline"><a href="sell.php">Selling</a></li>
-      <li class="visible-xs-inline"><a href="rent.php">Renting</a></li>
       <li class="visible-xs-inline"><a href="finance.php">Finance</a></li>
       <li class="visible-xs-inline"><a href="contact.php">Contact Us</a></li>
     </ul>
@@ -173,7 +165,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<li><a href="index.php">Main</a></li>
 					<li class="current"><a href="buy.php">Buying</a></li>
 					<li><a href="sell.php">Selling</a></li>
-					<li><a href="rent.php">Renting</a></li>
 					<li><a href="finance.php">Finance</a></li>
 					<li><a href="contact.php">Contact Us</a></li>
 				</ul>
