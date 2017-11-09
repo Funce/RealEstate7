@@ -2,6 +2,7 @@
 	function login($email, $password)
 	// Login function which returns True if there is a match in db. The session is also set.
 	{
+		global $link;
 		$query = "SELECT * FROM tbl_member WHERE m_email = '$email'";
 		$result = mysqli_query($link, $query);
 		if (!mysqli_num_rows($result))
@@ -23,9 +24,10 @@
 	function register($email, $password)
 	// function to be called when db assistance is required. Will return False if already exists.
 	{
+		global $link;
 		$query = "SELECT * FROM tbl_member WHERE m_email = '$email'";
 		$result = mysqli_query($link, $query);
-		if (mysqli_num_rows($result))
+		if (mysqli_num_rows($result)) // Succeeds if non-empty set is reached
 		{
 			return FALSE;
 		}

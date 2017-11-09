@@ -2,7 +2,7 @@
 	include "config.php";
 	include "library/functions.php";
 
-	if (isset($_SESSION['user'])) //Can't register if already logged in
+	if (isset($_SESSION['user'])) //Can't login if already logged in
 	{
 		header("Location: index.php");
 	}
@@ -15,10 +15,10 @@
 			$error = "You must complete all fields.";
 		}
 		
-		// Now we attempt to register, the register function will check if they already exist
-		if (!register($_POST['email'], $_POST['password']))
+		// Now we attempt to login, the login function will check and create the session
+		if (!login($_POST['email'], $_POST['password']))
 		{
-			$error = "A user is already registered under that email";
+			$error = "Incorrect email and password combination";
 		}
 		else
 		{
@@ -39,7 +39,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-KJGS4HC');</script>
 <!-- End Google Tag Manager -->
-<title>Real Estate 7 - Register</title>
+<title>Real Estate 7 - Login</title>
 
 <!-- Bootstrap -->
 <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css">
@@ -79,13 +79,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<div class="col-lg-2"> </div>
 
 	<div class="col-lg-6">
-	<h3>Register</h3>
+	<h3>Login</h3>
 	<form method="post" action="#">
   <strong>Email:</strong></di><br>
   <input type="text" name="email" value=""><br>
   <strong>Password:</strong></di><br>
   <input type="text" name="password" value=""><br><br>
-  <input type="submit" value="Register"><p class="error-message"><?php echo $error?></p>
+  <input type="submit" value="Login"><p class="error-message"></p>
 </form>
 	</div>
   </div>
