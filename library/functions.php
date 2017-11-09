@@ -70,6 +70,7 @@
 	function disconnect()
 	// Disconnects from the database. Run at the end if you've included config.
 	{
+		global $link;
 		mysqli_close($link);
 	}
 ?>
