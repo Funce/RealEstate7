@@ -6,6 +6,7 @@
 	{
 		header("Location: index.php");
 	}
+	$error = "";
 	// SO they're not logged in, verify they have submitted the form
 	if(isset($_POST['email']))
 	{
@@ -85,7 +86,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <input type="text" name="email" value=""><br>
   <strong>Password:</strong></di><br>
   <input type="text" name="password" value=""><br><br>
-  <input type="submit" value="Login"><p class="error-message"></p>
+  <input type="submit" value="Login"><p class="error-message"><?php echo $error;?></p>
 </form>
 	</div>
   </div>
