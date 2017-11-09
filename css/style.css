@@ -88,6 +88,11 @@ img {
 #success_message{ 
 	display: none;
 }
+
+#error-message {
+	font-weight: bolder;
+	color:#FD031B;
+}
 /* -- Mortgage calculator start -- */
 .output {
   font-weight:bold;
@@ -113,3 +118,4 @@ th, td {
   max-width: 100%;
   height: 200;
 }
+
