@@ -7,6 +7,7 @@
 		header("Location: index.php");
 	}
 	// SO they're not logged in, verify they have submitted the form
+	$error = "";
 	if(isset($_POST['email']))
 	{
 		// If they have set that, then we need to check if any fields are empty
