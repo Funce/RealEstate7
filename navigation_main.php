@@ -15,9 +15,9 @@
 <nav>
 	<div id="main_navigation">
 		<ul class="menu">
-			<li class="current"><a href="index.php">Main</a></li>
-			<li><a href="buy.php">Buying</a></li>
-			<li><a href="sell.php">Selling</a></li>
+			<li><a href="index.php">Main</a></li>
+			<li><a href="buy.php">Browse</a></li>
+			<li><a href="sell.php">Post a Listing</a></li>
 			<li><a href="finance.php">Finance</a></li>
 			<li><a href="contact.php">Contact Us</a></li>
 		</ul>
