@@ -1,6 +1,11 @@
 <?php
 	include "config.php";
 	include "library/functions.php";
+	
+	if(isset($_SESSION['user']))
+	{
+		$dreamer_list = dream_list_get($_SESSION['user']['id']);
+	}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -78,13 +83,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				$property_type = $row['p_type'];
 		?>
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-          <div class="thumbnail"> <img src="img/400X200.gif" alt="Thumbnail Image 1" class="img-responsive">
+          <div class="thumbnail"> <img src="img/<?php echo $row['i_name']; ?>" alt="<?php echo $row['p_title']; ?>" class="img-responsive">
             <div class="caption">
-              <h3><?php echo $row['p_title']; ?></h3>
-              <p><?php echo $row['p_address']; ?><br />
-              <?php echo $row['c_name'];?> </p>
+              <h3><?php echo $row['p_title'];?></h3>
+              <p><?php echo $row['p_address'];?><br />
+              <?php echo $row['c_name'];?></p>
+              <?php if(isset($_SESSION['user']))
+				{
+					if(!in_array($row['p_id'], $dreamer_list))
+					{
+				?>
+              	<p class="text-right"><a href="#" class="btn btn-success">Add to Dreamlist</a></p>
+				<?php
+					}
+					else
+					{?>
+					<p class="text-right"><a href="#" class="btn btn-danger">Remove from Dreamlist</a></p>
+					<?php		
+					}
+				}
+				?>
               <hr>
-              <p class="text-center"><a href="#" class="<?php echo button_class($property_type);?>" role="button"><?php echo button_text($property_type);?></a></p>
+              <p class="text-left"><a href="#" class="<?php echo button_class($property_type);?>" role="button"><?php echo button_text($property_type);?></a></p>
+              
             </div>
           </div>
         </div>

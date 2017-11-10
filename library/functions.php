@@ -42,7 +42,7 @@
 		switch($button_type)
 		{
 			case 1:
-				return "btn btn-success";
+				return "btn btn-primary";
 			case 2:
 				return "btn btn-info";
 			case 3:
@@ -65,6 +65,20 @@
 			default:
 				return "Something went wrong";
 		}
+	}
+
+	function dream_list_get($member_id)
+	{
+		global $link;
+		$query = "SELECT * FROM tbl_wishlist WHERE w_m_id = $member_id";
+		$result = mysqli_query($link, $query);
+		$dreaming = array();
+		while($row = mysqli_fetch_array($result))
+		{
+			$dreaming[] = $row['w_p_id'];
+		}
+		mysqli_free_result($result);
+		return $dreaming;
 	}
 
 	function disconnect()
