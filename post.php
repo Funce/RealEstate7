@@ -96,7 +96,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <input type="text" class="form-control" name="listing-title" id="listing-title" aria-describedby="basic-addon1">
             </div>  <br>
             <h5><strong>Details</strong></h5>
-            <textarea rows="8" cols="50"></textarea> 
+            <textarea rows="8" cols="25"></textarea> 
             <br><br>
             <h5><strong>Asking Price</strong></h5>
             <input type="text">$</div>
