@@ -17,7 +17,7 @@
 		<ul class="menu">
 			<li><a href="index.php">Main</a></li>
 			<li><a href="buy.php">Browse</a></li>
-			<li><a href="sell.php">Post a Listing</a></li>
+			<li><a href="post.php">Post a Listing</a></li>
 			<li><a href="finance.php">Finance</a></li>
 			<li><a href="contact.php">Contact Us</a></li>
 		</ul>

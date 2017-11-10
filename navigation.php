@@ -29,7 +29,7 @@
 		}?>
       <li class="visible-xs-inline"><a href="index.php">Home</a></li>
       <li class="visible-xs-inline"><a href="buy.php">Browse</a></li>
-      <li class="visible-xs-inline"><a href="sell.php">Post a Listing</a></li>
+      <li class="visible-xs-inline"><a href="post.php">Post a Listing</a></li>
       <li class="visible-xs-inline"><a href="finance.php">Finance</a></li>
 		<li class="visible-xs-inline"><a href="contact.php">Contact Us</a></li>
     </ul>
