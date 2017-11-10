@@ -85,7 +85,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <strong>Email:</strong></di><br>
   <input type="text" name="email" value=""><br>
   <strong>Password:</strong></di><br>
-  <input type="text" name="password" value=""><br><br>
+  <input type="password" name="password" value=""><br><br>
   <input type="submit" value="Login"><p class="error-message"><?php echo $error;?></p>
 </form>
 	</div>

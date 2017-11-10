@@ -15,15 +15,21 @@
       <?php
 		}
 		else 
-		{?>
+		{
+			if($_SESSION['user']['role'] == ADMIN_LEVEL)
+			{?>
+				<li><a href="admin/index.php"><span class="glyphicon glyphicon-wrench"></span> <strong>Admin</strong></a></li>
+				<?php
+			}
+		?>
 		<li><a href="wish.php" class="btn btn-warning btn-xs"><strong>Dreamlist</strong></a></li>
-	 	<li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span><strong>Logout</strong></a></li>
+	 	<li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> <strong>Logout</strong></a></li>
 	  
      <?php 
 		}?>
       <li class="visible-xs-inline"><a href="index.php">Home</a></li>
-      <li class="visible-xs-inline"><a href="buy.php">Buying</a></li>
-      <li class="visible-xs-inline"><a href="sell.php">Selling</a></li>
+      <li class="visible-xs-inline"><a href="buy.php">Browse</a></li>
+      <li class="visible-xs-inline"><a href="sell.php">Post a Listing</a></li>
       <li class="visible-xs-inline"><a href="finance.php">Finance</a></li>
 		<li class="visible-xs-inline"><a href="contact.php">Contact Us</a></li>
     </ul>
