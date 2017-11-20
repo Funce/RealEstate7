@@ -88,7 +88,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="caption">
               <h3><?php echo $row['p_title'];?></h3>
               <p><?php echo $row['p_address'];?><br />
-              <?php echo $row['c_name'];?></p>
+              <?php echo $row['c_name'];?><br />
+              $<?php echo $row['p_price'];?></p>
+              
               <?php if(isset($_SESSION['user']))
 				{
 					if(!in_array($row['p_id'], $dreamer_list))
@@ -104,9 +106,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					}
 				}
 				?>
-              <hr>
-              <p class="text-left"><a href="#" class="<?php echo button_class($property_type);?>" role="button"><?php echo button_text($property_type);?></a></p>
-              
+              <hr>              
             </div>
           </div>
         </div>

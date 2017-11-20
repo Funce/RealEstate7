@@ -187,9 +187,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					}
 				}
 				?>
-              <hr>
-              <p class="text-left"><a href="#" class="<?php echo button_class($property_type);?>" role="button"><?php echo button_text($property_type);?></a></p>
-              
+              <hr>              
             </div>
           </div>
         </div>
