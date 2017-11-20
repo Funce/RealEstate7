@@ -1,12 +1,12 @@
 <div id="carousel-299058" class="carousel slide">		  
 		  <div class="carousel-inner">
-			<div class="item"> <img class="img-responsive" src="img/slider-1.jpg" alt="thumb">
+			<div class="item"> <img class="img-responsive" src="<?php echo ROOT_DIRECTORY;?>img/slider-1.jpg" alt="thumb">
 			  <div class="carousel-299058-caption"> Buy your dream home today! </div>
 			</div>
-			<div class="item active"> <img class="img-responsive" src="img/slider-2.jpg" alt="thumb">
+			<div class="item active"> <img class="img-responsive" src="<?php echo ROOT_DIRECTORY;?>img/slider-2.jpg" alt="thumb">
 			  <div class="carousel-299058-caption"> Dreams may not be free but they are worth it! </div>
 			</div>
-			<div class="item"> <img class="img-responsive" src="img/slider-3.jpg" alt="thumb">
+			<div class="item"> <img class="img-responsive" src="<?php echo ROOT_DIRECTORY;?>img/slider-3.jpg" alt="thumb">
 			  <div class="carousel-299058-caption"> Let us help you find your perfect home. </div>
 			</div>
 		  </div>

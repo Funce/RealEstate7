@@ -16,13 +16,13 @@
   <div class="media-body">
         <h4 class="media-heading">Investors</h4>
 	  <p>• Restrictions for investor lending extended from nationwide from Auckland only. <p>• Banks will be forced to require a 40 per cent deposit - up from 30 per cent - for at least 95 per cent of the loans they make in this area.</p></div>
-      <div class="media-right"> <a href="#"> <img class="media-object" src="img/75X.gif" alt="placeholder image"></a></div>
+      <div class="media-right"> <a href="#"> <img class="media-object" src="<?php echo ROOT_DIRECTORY;?>img/75X.gif" alt="placeholder image"></a></div>
 </div>
 <div class="media">
   <div class="media-body">
     <h4 class="media-heading">Home buyers</h4>
 <p>• Restrictions for owner-occupier lending extended from Auckland to nationwide.</p><p>• Required deposit level remains at 20 per cent for at least 90 per cent of bank lending.</p></div>
-  <div class="media-right"> <a href="#"> <img class="media-object" src="img/75X.gif" alt="placeholder image"></a></div>
+  <div class="media-right"> <a href="#"> <img class="media-object" src="<?php echo ROOT_DIRECTORY;?>img/75X.gif" alt="placeholder image"></a></div>
 </div>
 </div>
 </div>
@@ -53,7 +53,7 @@ Addington<br>
     <span class="fa fa-linkedin-square"></span>
   </a>
   <br /><br />
-  <img class="hidden-xs hidden-sm hidden-md" src="img/Realestate 7.png" style="width: 100px;" />
+  <img class="hidden-xs hidden-sm hidden-md" src="<?php echo ROOT_DIRECTORY;?>img/Realestate 7.png" style="width: 100px;" />
 </div>
   </div> 
 </div>
@@ -61,7 +61,7 @@ Addington<br>
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <p><strong>Copyright © Clayton & Elliot. All rights reserved.</strong></p>
+        <p><strong>Copyright © Clayton & Elliott. All rights reserved.</strong></p>
       </div>
     </div>
   </div>

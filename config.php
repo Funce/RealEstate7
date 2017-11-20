@@ -13,7 +13,14 @@
 	{
 		die("Connection error: " . mysqli_connect_error());
 	}
+
+
+	//Set up root directory for img sources
+	define('ROOT_DIRECTORY', "http://" . $_SERVER['SERVER_NAME']. '/RealEstate7/');
 	// set up some defines for Role permissions
 	define("ADMIN_LEVEL", 9);
 	define("USER_LEVEL", 1);
+
+	//width for the images creation
+	define('THUMBNAIL_WIDTH', 400);
 ?>
