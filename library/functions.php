@@ -1,4 +1,9 @@
 <?php
+	// Do some property type defines
+	define("SALE_TYPE", 1);
+	define("RENT_TYPE", 2);
+	define("LEASE_TYPE", 3);
+
 	function login($email, $password)
 	// Login function which returns True if there is a match in db. The session is also set.
 	{
