@@ -8,14 +8,14 @@
 			<select class="form-control" name="type" id="type1">
 				<option selected="selected" value="0">Region ↓↓↓</option> 
 				<?php
-					$query = "SELECT DISTINCT * FROM tbl_city";
+					$query = "SELECT * FROM tbl_city";
 					$result = mysqli_query($link, $query);
 					while ($row = mysqli_fetch_array($result))
 					{?>
 				<option value="<?php echo $row['c_id'];?>"><?php echo $row['c_name'];?></option>
 					<?php
 					}
-					mysqli_free_result();
+					mysqli_free_result($result);
 					?>
 			</select>
 		</div>  
@@ -32,9 +32,9 @@
 			<input type="text" name="price">$
 		</div>
 		
-		<h5><strong>Upload Photos</strong></h5>
+		<h5><strong>Upload Photo</strong></h5>
 		<ul>          
-			<li><input type="file" name="photos[]" multiple="multiple"></li>
+			<li><input type="file" name="photo"></li>
 		</ul>
 		<br>
 		<input type="reset"> <input type="submit">           
