@@ -25,13 +25,12 @@
 		{
 			$listing_error = "Please make sure to enter all fields";
 		}
-		else if(isset($_FILES['photo']))
+		else if(!isset($_FILES['photo']))
 		{  
 			$listing_error = "Please upload a photo";
 		}
-		if(!file_exists($_FILES['photo']['tmp_name']) || !is_uploaded_file($_FILES['photo']['tmp_name']))
+		else if(!is_numeric($_POST['price']))
 		{
-
 			$listing_error = "Please enter a number in the price field";
 		}
 		// All checks succeeded for addListing, lets add it
