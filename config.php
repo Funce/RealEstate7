@@ -16,6 +16,7 @@
 
 
 	//Set up root directory for img sources
+	define('IMG_DIR', str_replace(DIRECTORY_SEPARATOR, '/', __DIR__).'/img/');
 	define('ROOT_DIRECTORY', "http://" . $_SERVER['SERVER_NAME']. '/RealEstate7/');
 	// set up some defines for Role permissions
 	define("ADMIN_LEVEL", 9);

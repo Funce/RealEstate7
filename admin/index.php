@@ -1,4 +1,4 @@
-<?php
+ <?php
 	include "../config.php";
 	include "../library/functions.php";
 	include "../library/image-creation.php";
@@ -14,30 +14,81 @@
 			header("Location: ../login.php");
 		}
 	}
-	$error = "";
-
-	// ADD LISTING CHECK
+	$listing_error = "";
+	// Add Listing form
 	if(isset($_POST['type']))
 	{
+		
 		//Check if any fields are empty, and that at least one photo is entered
-		if($_POST[''] or $_POST[''] or $_POST[''] or $_POST[''])
+		
+		if($_POST['type'] == 0 or $_POST['listing-title'] == "" or $_POST['details'] == "" or $_POST['price'] == "")
 		{
-			$error = "Please make sure to enter all fields";
+			$listing_error = "Please make sure to enter all fields";
 		}
-		else if(isset($_FILES['photos']))
+		else if(isset($_FILES['photo']))
 		{  
-			foreach($_FILES['photos']['tmp_name'] as $key => $tmp_name )
-			{
-      			if(!empty($_FILES['photos']['tmp_name'][$key]))
-				{
-    				$error="Please upload at least one photo";
-    			}
-			}
+			$listing_error = "Please upload a photo";
+		}
+		if(!file_exists($_FILES['photo']['tmp_name']) || !is_uploaded_file($_FILES['photo']['tmp_name']))
+		{
+
+			$listing_error = "Please enter a number in the price field";
 		}
 		// All checks succeeded for addListing, lets add it
 		else
 		{
+			$region = $_POST['type'];
+			$title = mysqli_real_escape_string($link, $_POST['listing-title']);
+			$details = mysqli_real_escape_string($link, $_POST['details']);
+			$price = mysqli_real_escape_string($link, $_POST['price']);
+			//Image file
+			$imgName = $_FILES['photo']['name'];
+			$tmpName = $_FILES['photo']['tmp_name'];
+			$ext = strrchr($imgName, ".");
+			$newName = md5(rand()*time()).$ext;
+			$imgPath = IMG_DIR . $newName;
+			createThumbnail($tmpName, $imgPath, THUMBNAIL_WIDTH);
 			
+			// Add listing to properties
+			$query = "INSERT INTO tbl_property (p_title, p_address, p_c_id, p_price) VALUES ('$title', '$details', '$region', '$price')";
+			mysqli_query($link, $query); // execute!
+			$last_id = mysqli_insert_id($link);
+			
+			//Separate query for images due to different tables
+			$query = "INSERT INTO tbl_image (i_name, i_p_id) VALUES ('$newName', '$last_id')";
+			mysqli_query($link, $query);
+			?>
+			<form class="well form-horizontal" method="post" enctype="multipart/form-data" action='#'>
+				<fieldset>
+					<!-- Form Start -->
+					<legend>Listing added Successfully</legend>     
+				</fieldset>
+			</form>
+			<?php
+		}
+	} // End of AddListing Check
+	// Add City Check
+	$city_error = "";
+	if(isset($_POST['city_name']))
+	{
+		//Validate it, check if empty
+		if($_POST['city_name'] == "")
+		{
+			$city_error = "Please enter a city";
+		}
+		else
+		{
+			$city_name = mysqli_real_escape_string($link, $_POST['city_name']);
+			$query = "INSERT INTO tbl_city (c_name) VALUES ('$city_name')";
+			mysqli_query($link, $query);
+			?>
+			<form class="well form-horizontal" method="post" enctype="multipart/form-data" action='#'>
+				<fieldset>
+					<!-- Form Start -->
+					<legend>City added Successfully</legend>     
+				</fieldset>
+			</form>
+			<?php
 		}
 	}
 ?>

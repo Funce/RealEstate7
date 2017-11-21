@@ -6,7 +6,7 @@
 		<div class="form-group">
 			<label for="listingtitle" class="control-label">City Name</label>
 			<div class="input-group">
-			  <input type="text" class="form-control" name="listing-title" id="city-name" aria-describedby="basic-addon1">
+			  <input type="text" class="form-control" name="city_name" id="city_name" aria-describedby="basic-addon1">
 			</div>
 		</div>
 		<br>

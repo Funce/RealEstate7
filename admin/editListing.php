@@ -27,7 +27,7 @@
 					<td><p><?php echo $row['c_name']; ?></p></td>
 					<td><p><?php echo $row['p_address']; ?></p></td>
 					<td><p><?php echo $row['p_price']; ?></p></td>
-					<td><p><!--Image--></p></td>
+					<td><p><img src="<?php echo ROOT_DIRECTORY; ?>img/<?php echo $row['i_name']; ?>" style="width: 60px;"></p></td>
 					<td></td>
 					<td>
 						<a href="editListingProcess.php?id=<?php echo $row['p_id']; ?>"><img src="<?php echo ROOT_DIRECTORY; ?>img/edit.ico" style="width: 20px;" alt="edit" /></a>

@@ -36,6 +36,7 @@
 		<ul>          
 			<li><input type="file" name="photo"></li>
 		</ul>
+		<span class="error-message"><?php echo $listing_error; ?></span>
 		<br>
 		<input type="reset"> <input type="submit">           
 	</fieldset>
